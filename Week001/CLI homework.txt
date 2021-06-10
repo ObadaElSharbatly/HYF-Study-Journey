@@ -1,0 +1,12 @@
+1- How do I create a hidden file or folder? How do I display it in the CLI?
+    * creat a file using (touch) command like test.txt
+    * Use (mv) command and to rename the file with (.) before it
+	mv test.txt .test.txt
+    * then I can use (ls) command to make sure it's hidden
+    * to display the hidden files we can use (ls -a) then it's going to show hidden files as well.
+
+2- How do I create multiple nested directories, like /c/Users/myusername/these/folders/are/just/for/fun?
+    * using (mkdir -p) then typing a full length that we need
+
+3- How do I append a message to a file, without a newline character
+    *using (echo sentence >> filename) like I did now
