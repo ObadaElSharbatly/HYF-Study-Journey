@@ -1,0 +1,53 @@
+@media screen and (min-width:600px) {
+    .grid-item {
+        width: 30%;
+        transition-duration:1s;
+    }
+    .grid-floats {
+        width: 100%;
+        padding: 0px 0px 15px 7%;
+    }
+    .grid-floats > .grid-item {
+        float: left;
+        margin: 10px;
+        height:550px;
+        overflow: hidden;
+    }
+
+    #f-float , #s-float {
+        width: 45%;
+        height: 400px;
+    }
+    
+    .grid-floats > .grid-item:hover, #f-float:hover , #s-float:hover {
+        width: 75%;
+        height: fit-content;
+    }
+    
+    .grid-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+        
+    }
+    #first-con, #second-con {
+        flex: 1 0 45%  ;
+    }
+    .grid-flex > .grid-item{
+        margin: 10px;
+        flex: 1 0 30%;
+
+    }
+    .grid-flex > .grid-item > h3 {
+        font-size: 120%;
+    }
+    .grid-flex > .grid-item > img {
+        
+    }
+    .grid-flex > .grid-item > p {
+
+    }
+}
