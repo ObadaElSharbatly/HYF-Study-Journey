@@ -13,7 +13,7 @@ body {
 }
 
 header{
-    width: 100w;
+    width: 100%;
     height: 180px;
     background-color: rgb(46, 0, 98);
     border-radius: 50%;
