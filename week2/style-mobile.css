@@ -14,7 +14,7 @@ body {
 
 header{
     width: 100w;
-    height: 20vh;
+    height: 180px;
     background-color: rgb(46, 0, 98);
     border-radius: 50%;
     transform: translateY(-50%);
