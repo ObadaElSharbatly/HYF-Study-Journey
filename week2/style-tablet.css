@@ -3,6 +3,11 @@
         width: 30%;
         transition-duration:1s;
     }
+
+    .grid-item > img {
+        
+    }
+
     .grid-floats {
         width: 100%;
         padding: 0px 0px 15px 7%;
@@ -14,12 +19,12 @@
         overflow: hidden;
     }
 
-    #f-float , #s-float {
+    .grid-floats > .grid-item:first-child, .grid-floats > .grid-item:nth-child(2) {
         width: 45%;
         height: 400px;
     }
     
-    .grid-floats > .grid-item:hover, #f-float:hover , #s-float:hover {
+    .grid-floats > .grid-item:hover {
         width: 75%;
         height: fit-content;
     }
@@ -33,7 +38,8 @@
         width: 100%;
         
     }
-    #first-con, #second-con {
+    .grid-flex > .grid-item:nth-child(2),
+    .grid-flex > .grid-item:first-child {
         flex: 1 0 45%  ;
     }
     .grid-flex > .grid-item{
@@ -44,9 +50,7 @@
     .grid-flex > .grid-item > h3 {
         font-size: 120%;
     }
-    .grid-flex > .grid-item > img {
-        
-    }
+    
     .grid-flex > .grid-item > p {
 
     }
