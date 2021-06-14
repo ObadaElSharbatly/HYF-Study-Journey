@@ -70,7 +70,7 @@ h2 {
 }
 
 .grid-item > img {
-    max-width: 90%;
+    max-width: 80%;
     max-height: 90vh;
     box-shadow: 0px 0px 15px rgb(126, 38, 228);
     display: block;
