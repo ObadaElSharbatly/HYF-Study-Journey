@@ -7,33 +7,32 @@
 
 body {
     background-color: rgb(202 214 255);
+    width: 100%;
 
 }
 
 header{
-    width: 98vw;
+    width: 100w;
     height: 20vh;
     background-color: rgb(46, 0, 98);
     border-radius: 50%;
     transform: translateY(-50%);
-    margin: auto;
 }
 
 header > h1 {
     font-family: 'Righteous', cursive;    width: fit-content;
-    font-size: 10vw;
+    font-size: 30pt;
     font-weight: 400;
     height: 30%;
     text-align: center;
     margin: auto;
-    transform: translateY(200%);
+    transform: translateY(185%);
     letter-spacing: 5px;
     color: white;
 }
 
 main{
     width: 100%;
-    margin: auto;
     font-family: 'Baloo Tammudu 2', cursive;
 }
 
@@ -62,7 +61,7 @@ h2 {
 
 .grid-item {
     border: 2px solid black;
-    max-width: 500px;
+    max-width: 100%;
     list-style: none;
     margin-bottom: 20px;
 }
