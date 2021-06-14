@@ -97,3 +97,8 @@ h2 {
     padding: 7px;
     color: rgb(46, 0, 98);
 }
+
+p::selection {
+    background-color: rgb(46, 0, 98);
+    color: white;
+}
