@@ -1,28 +1,33 @@
-@media screen and (min-width:600px) {
+@media screen and (min-width:1025px) {  
     .grid-item {
-        width: 30%;
-        transition-duration:1s;
+        width: 24%;
     }
 
     .grid-item > img {
         max-width: 90%;
+        max-height: 60%;
     }
 
     .grid-floats {
-        width: 100%;
-        padding: 0px 0px 15px 7%;
+        width: 90%;
+        margin: auto;
     }
+
     .grid-floats > .grid-item {
         float: left;
-        margin: 10px;
+        margin: .3%;
         height:550px;
         overflow: hidden;
         cursor: pointer;
         
     }
 
-    .grid-floats > .grid-item:first-child, .grid-floats > .grid-item:nth-child(2) {
-        width: 46%;
+    .grid-floats > .grid-item:first-child {
+        width: 48.5%;
+    }
+
+    .grid-floats > .grid-item:nth-child(2) {
+        width: 24%
     }
     
     .grid-floats > .grid-item:active {
@@ -32,35 +37,42 @@
     }
 
     @keyframes readmore {
+
         100% {
-            width: 60%;
-            height: 550;
+            width: 46%;
+            height: fit-content;
         }
     }
-    
+
     .grid-flex {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         margin-right: auto;
         margin-left: auto;
-        width: 100%;
+        width: 90%;
         
     }
-    .grid-flex > .grid-item:nth-child(2),
+    
     .grid-flex > .grid-item:first-child {
-        flex: 1 0 45% ;
+        flex: 1 0 48%  ;
     }
+
+    .grid-flex > .grid-item:nth-child(2) {
+        flex: 1 0 23%
+    }
+
     .grid-flex > .grid-item{
         margin: 10px;
-        flex: 1 0 30%;
+        flex: 1 0 23%;
 
     }
     .grid-flex > .grid-item > h3 {
         font-size: 120%;
     }
     
-    .grid-flex > .grid-item > p {
-
+    .grid-item > p {
+        font-size: 2rem;
+        line-height: 1.25;
     }
 }
