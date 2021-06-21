@@ -1,0 +1,24 @@
+.head-fnt {
+    font-family: 'Questrial', sans-serif;
+}
+
+.p-fnt{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    height: 80vh;
+    background-color: chocolate;
+    background-image: url();
+    background-size: cover;
+    background-position:center ;
+}
+
+.brd{
+    border-radius: 28px !important;
+    margin: 0px !important;
+}
+
+#h-con {
+    min-width: 90% !important;
+}
