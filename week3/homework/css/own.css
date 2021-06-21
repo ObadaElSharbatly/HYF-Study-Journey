@@ -6,12 +6,12 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-header {
+#header {
     height: 80vh;
-    background-color: chocolate;
-    background-image: url();
-    background-size: cover;
-    background-position:center ;
+    background-image: url(../img/Earner_Home_bg_desktop2x.png);
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 .brd{
