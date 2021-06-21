@@ -18,11 +18,11 @@
 <body>
     <!--Start Header with front screen-->
     <header>
-        <nav class="black" id="nav-btns">
+        <nav class="black">
             <div class="nav-wrapper container row" id="h-con">
               <div class="col l6 row">
                 <div class="col l2 "> 
-                  <a href="#!" class="brand-logo">Uber</a>
+                  <a href="#!" class="brand-logo left">Uber</a>
                 </div>
                 <div class="col l10">
                   <ul class=" hide-on-med-and-down">
@@ -42,12 +42,16 @@
                   <!--Dropdown menus finish-->
                 </div>
               </div>
-              <div class="col l6">
+              <div class="col l6 right">
                 <ul class="right hide-on-med-and-down">
                     <li><a href="" class="waves-effect waves-light btn brd black"><i class="material-icons left">language</i>EN</a></li>
                     <li><a href="" class="waves-effect waves-light btn brd black dropdown-button" data-activates="pro-ls"><i class="material-icons left">apps</i>Products</a></li>
                     <li><a href="" class="waves-effect waves-light btn brd black"><i class="material-icons left">person_outline</i>login</a></li>
                     <li><a href="" class="white black-text waves-effect waves-light btn brd">signup</a></li>
+                </ul>
+                <ul class="right hide-on-large-only">
+                  <li><a href="" class="white black-text waves-effect waves-light btn brd">signup</a></li>
+                  <li><a href=""><i class="material-icons left">menu</i></a></li>
                 </ul>
                 <!--Dropdown menus start-->
                 <ul id='pro-ls' class='dropdown-content black'>
@@ -62,27 +66,70 @@
             </div>
         </nav>
     </header>
-    <div id="header">
-      
+    <div id="head-con">
+      <div class="row white" id="tabs-con">
+        <ul id="tabs-swipe-demo" class="tabs tabs-head">
+          <li class="tab col s4 row"><i class="material-icons col s12">time_to_leave</i><a href="#test-swipe-1" class="col s12 black-text">Deliver or delivery</a></li>
+          <li class="tab col s4 row"><i class="material-icons col s12">restaurant</i><a href="#test-swipe-2" class="col s12 black-text">Eat</a></li>
+          <li class="tab col s4 row"><i class="material-icons col s12">motorcycle</i><a href="#test-swipe-3" class="col s12 black-text">Ride</a></li>
 
+        </ul>
+        <!--first tab-->
+        <div id="test-swipe-1" class="col s12 row">
+          <h3 class="col s12">Get in the driver’s seat and get paid</h3>
+          <p class="flow-text col s12">Drive on the platform with the largest network of active riders.</p>
+          <a href="" class="btn black white-text col s5">Sign up to drive</a>
+          <div class="col s6 m12 offset-l1"><p>Learn more about driving and delivering</p></div>
+        </div>
+        <!--Second tab-->
+        <div id="test-swipe-2" class="col s12 ">Test 2</div>
+        <!--third tab-->
+        <div id="test-swipe-3" class="col s12 ">Test 3</div>
+      </div>
+      <div id="head-img">
+      </div>
     </div>
     <!--Start Footer-->
+    
     <footer class="page-footer">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <h5 class="white-text">Uber</h5>
+            <p class="grey-text text-lighten-4 flow-text"><a href="" class="white-text">Visit Help Center</a></p>
           </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
+          <div class="col l4 offset-l2 s12 m6">
+            <h5 class="white-text">Company</h5>
             <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">About us</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Our offerings</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Newsroom</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Investors</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Careers</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">AI</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Gift cards</a></li>
             </ul>
           </div>
+
+          <div class="col l4 offset-l2 s12 m6">
+            <h5 class="white-text">Products</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Ride</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Drive</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Eat</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Uber for Business</a></li>
+            </ul>
+          </div>
+
+          <div class="col l4 offset-l2 s12 m6">
+            <h5 class="white-text">Global citizenship</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Safety</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Diversity and Inclusion</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
       <div class="footer-copyright">
