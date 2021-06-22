@@ -2,13 +2,22 @@
     font-family: 'Questrial', sans-serif;
 }
 
+h5 {
+    font-size: 1.3rem !important;
+    margin: 15px !important;
+}
+
+h4 {
+    
+}
+
 body {
     font-family: 'Ubuntu', sans-serif;
 }
 .p-fnt{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
-    font-size: 18pt;
+    font-size: 14pt;
 }
 
 #head-img {
@@ -24,6 +33,42 @@ body {
     margin: 5px !important;
     font-size: 14px !important;
     padding: 0px 7px !important;
+}
+
+.pad-r {
+    padding-right: 30px !important;    
+}
+
+.pad-l {
+    padding-left: 30px !important;    
+}
+
+#app-con {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.app-con {
+    border: 2px solid rgb(223, 221, 221);
+    width: 45%;
+    height: 150px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:10px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.app-con>img {
+    max-height: 100%;
+}
+
+.no-border {
+    border: none !important;
+    border-bottom: 2px solid rgb(223, 221, 221) !important;
 }
 
 #h-con {
@@ -64,5 +109,15 @@ body {
     #head-img {
         background-image: url(../imgs/Earner_Home_bg_desktop2x.png);
         min-height: 750px;
+    }
+
+    #app-con {}
+
+    
+}
+
+@media screen and (max-width:700px) {
+    .app-con {
+        min-width: 100%;
     }
 }
