@@ -2,23 +2,122 @@
     font-family: 'Questrial', sans-serif;
 }
 
-.p-fnt{
-    font-family: 'Ubuntu', sans-serif;
+h5 {
+    font-size: 1.3rem !important;
+    margin: 15px !important;
 }
 
-header {
+h4 {
+    
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+.p-fnt{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 14pt;
+}
+
+#head-img {
     height: 80vh;
-    background-color: chocolate;
-    background-image: url();
-    background-size: cover;
-    background-position:center ;
+    background-image: url(../imgs/Earner_Home_bg_mobile.png);
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 .brd{
     border-radius: 28px !important;
-    margin: 0px !important;
+    margin: 5px !important;
+    font-size: 14px !important;
+    padding: 0px 7px !important;
+}
+
+.pad-r {
+    padding-right: 30px !important;    
+}
+
+.pad-l {
+    padding-left: 30px !important;    
+}
+
+#app-con {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.app-con {
+    border: 2px solid rgb(223, 221, 221);
+    width: 45%;
+    height: 150px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:10px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.app-con>img {
+    max-height: 100%;
+}
+
+.no-border {
+    border: none !important;
+    border-bottom: 2px solid rgb(223, 221, 221) !important;
 }
 
 #h-con {
     min-width: 90% !important;
+    position: relative;
+}
+
+.tabs-head {
+    height: 80px !important;
+    font-weight: 500;
+    padding: 10px;
+}
+
+#test-swipe-1 {
+    padding: 15px 25px;
+}
+
+.uber4b {
+    background-image: url(../imgs/Uber-4-bussiness.png);
+    height: 300px;
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+}
+
+@media screen and (min-width:700px) {
+
+    #tabs-con {
+        width: 30vw !important;
+        min-width: 450px;
+        position: absolute;
+        z-index: 1;
+        transform: translate(7vw,5vw);
+
+    }
+
+    #head-img {
+        background-image: url(../imgs/Earner_Home_bg_desktop2x.png);
+        min-height: 750px;
+    }
+
+    #app-con {}
+
+    
+}
+
+@media screen and (max-width:700px) {
+    .app-con {
+        min-width: 100%;
+    }
 }

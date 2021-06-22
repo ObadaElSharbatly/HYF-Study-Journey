@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uber Simulation</title>
+    <!--Import my own css-->
     <link rel="stylesheet" href="css/own.css">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,34 +17,260 @@
 </head>
 
 <body>
+    <!--Start Header with front screen-->
     <header>
-        <nav class="black" id="nav-btns">
+        <nav class="black">
             <div class="nav-wrapper container row" id="h-con">
               <div class="col l6 row">
                 <div class="col l2 "> 
-                  <a href="#!" class="brand-logo">Uber</a>
+                  <a href="#!" class="brand-logo left head-fnt">Uber</a>
                 </div>
-                <div class="col l10 right">
+                <div class="col l10">
                   <ul class=" hide-on-med-and-down">
-                      <li><a href="" class="waves-effect waves-light btn brd black"><i class="material-icons right">keyboard_arrow_down</i>company</a></li>
+                      <li><a href="" class="waves-effect waves-light btn brd black dropdown-button" data-activates="company-ls"><i class="material-icons right">keyboard_arrow_down</i>company</a></li>
                       <li><a href="" class="waves-effect waves-light btn brd black">Safety</a></li>
                       <li><a href="" class="waves-effect waves-light btn brd black">Help</a></li>
-                      <li><a href="" class="waves-effect waves-light btn brd black">COVID-19 resources</a></li>
+                      <li><a href="" class="waves-effect waves-light btn brd black">COVID-19</a></li>
                   </ul>
+                  <!--Dropdown menus start-->
+                  <ul id='company-ls' class='dropdown-content black'>
+                    <li><a href="#!" class="white-text">About us</a></li>
+                    <li><a href="#!" class="white-text">Our offerings</a></li>
+                    <li><a href="#!" class="white-text">How uber works</a></li>
+                    <li><a href="#!" class="white-text">news room</a></li>
+                    <li><a href="#!" class="white-text">Blog</a></li>
+                  </ul>
+                  <!--Dropdown menus finish-->
                 </div>
               </div>
-              <div class="col l6">
+              <div class="col l6 right">
                 <ul class="right hide-on-med-and-down">
                     <li><a href="" class="waves-effect waves-light btn brd black"><i class="material-icons left">language</i>EN</a></li>
-                    <li><a href="" class="waves-effect waves-light btn brd black"><i class="material-icons left">apps</i>Products</a></li>
+                    <li><a href="" class="waves-effect waves-light btn brd black dropdown-button" data-activates="pro-ls"><i class="material-icons left">apps</i>Products</a></li>
                     <li><a href="" class="waves-effect waves-light btn brd black"><i class="material-icons left">person_outline</i>login</a></li>
                     <li><a href="" class="white black-text waves-effect waves-light btn brd">signup</a></li>
                 </ul>
+                <ul class="right hide-on-large-only">
+                  <li><a href="" class="white black-text waves-effect waves-light btn brd">signup</a></li>
+                  <li><a href=""><i class="material-icons left">menu</i></a></li>
+                </ul>
+                <!--Dropdown menus start-->
+                <ul id='pro-ls' class='dropdown-content black'>
+                  <li><a href="#!" class="white-text"><i class="material-icons">home</i>Home</a></li>
+                  <li><a href="#!" class="white-text"><i class="material-icons">directions_car</i>Ride</a></li>
+                  <li><a href="#!" class="white-text"><i class="material-icons">business_center</i>business</a></li>
+                  <li><a href="#!" class="white-text"><i class="material-icons">restaurant_menu</i>Eat</a></li>
+                  <li><a href="#!" class="white-text"><i class="material-icons">train</i>Transit</a></li>
+                </ul>
+                <!--Dropdown menus finish-->
               </div>
             </div>
         </nav>
     </header>
+    <div id="head-con">
+      <div class="row white section container" id="tabs-con">
+        <ul id="tabs-swipe-demo" class="tabs tabs-head conta">
+          <li class="tab col s4 row"><i class="material-icons col s12">time_to_leave</i><a href="#test-swipe-1" class="col s12 black-text">Deliver or delivery</a></li>
+          <li class="tab col s4 row"><i class="material-icons col s12">restaurant</i><a href="#test-swipe-2" class="col s12 black-text">Eat</a></li>
+          <li class="tab col s4 row"><i class="material-icons col s12">motorcycle</i><a href="#test-swipe-3" class="col s12 black-text">Ride</a></li>
+
+        </ul>
+        <!--first tab-->
+        <div id="test-swipe-1" class="col s12 row section container">
+          <h3 class="col s12">Get in the driver’s seat and get paid</h3>
+          <p class="flow-text col s12">Drive on the platform with the largest network of active riders.</p>
+          <a href="" class="btn black white-text col s5">Sign up to drive</a>
+          <div class="col s6 m12 offset-l1"><p>Learn more about driving and delivering</p></div>
+        </div>
+        <!--Second tab-->
+        <div id="test-swipe-2" class="col s12 ">Test 2</div>
+        <!--third tab-->
+        <div id="test-swipe-3" class="col s12 ">Test 3</div>
+      </div>
+      <div id="head-img">
+      </div>
+    </div>
+    <!--Uber for business-->
+    <div class="uber4b">
+      <div class="container section">
+        <h4>Uber for Business</h4>
+        <div class="flow-text">
+          <p>Transform the way your company moves and feeds its people.
+          </p>
+        </div>
+        <a href="" class="btn black"> See how</a>
+      </div>
+    </div>
+    <!--Uber Safety wherever-->
+    <div class="container section">
+      <h4>Focused on safety, wherever you go</h4>
+      <div class="row section">
+
+        <div class="col s12 m6 section pad-r">
+          <img src="imgs/community.png" alt="" class="responsive-img" style="min-width: 100%;">
+          <h5>Our commitment to your safety</h5>
+          <p class="p-fnt">With every safety feature and every standard in our Community Guidelines, we're committed to helping to create a safe environment for our users.</p>
+          <a href="" class="p-fnt">Read about our Community Guidelines</a>
+          <div class="divider"></div>
+          <a href="" class="p-fnt">See all safety features</a>
+          <div class="divider"></div>
+        </div>
+
+        <div class="col s12 m6 pad-l">
+          <img src="imgs/city.png" alt="" class="responsive-img" style="min-width: 100%;">
+          <h5>Setting 10,000+ cities in motion</h5>
+          <p class="p-fnt">The app is available in thousands of cities worldwide, so you can request a ride even when you’re far from home.</p>
+          <a href="" class="p-fnt">View all cities</a>
+          <div class="divider"></div>
+        </div>
+      </div>
+      
+      <div class="row">
+
+        <div class="col s12 m6 l4 row pad-r">
+          <i class="material-icons col s12">people</i>
+          <h5 class="col s12">About us</h5>
+          <p class="col s12">Find out how we started, what drives us, and how we’re igniting opportunity.</p>
+          <a href="" class="col s12">Learn more</a>
+          <div class="divider col s12"></div>
+        </div>
+
+        <div class="col s12 m6 l4 row pad-r pad-l">
+          <i class="material-icons col s12">library_books</i>
+          <h5 class="col s12">Newsroom</h5>
+          <p class="col s12">See announcements about our latest releases, initiatives, and partnerships.</p>
+          <a href="" class="col s12">Learn more</a>
+          <div class="divider col s12"></div>
+        </div>
+
+        <div class="col s12 m6 l4 row pad-l">
+          <i class="material-icons col s12">home</i>
+          <h5 class="col s12">Global citizenship</h5>
+          <p class="col s12">Read about our commitment to making a positive impact in the cities we serve.</p>
+          <a href="" class="col s12">Learn more</a>
+          <div class="divider col s12"></div>
+        </div>
+      </div>
+    </div>
+    <!--More in Apps-->
+
+    <div class="section grey lighten-4">
+      
+      <div class="container">
+        <h4>There’s more to love in the apps</h4>
+        <div id="app-con">
+
+          <div class="app-con">
+            <img src="imgs/Rider-App-logo.png" alt="">
+            <h5>Download the Driver app</h5>
+            <i class="material-icons">arrow_forward</i>
+          </div>
+
+          <div class="app-con">
+            <img src="imgs/Driver-App-logo.png" alt="">
+            <h5>Download the Uber app</h5>
+            <i class="material-icons">arrow_forward</i>
+          </div>
+
+        </div>
+      </div>  
+    </div>
+
+    <!--sign up Apps-->
+
+    <div class="section lighten-4">
+      
+      <div class="container">
+        <div id="app-con">
+
+          <div class="app-con no-border">
+            <h4>sign up to Drive</h4>
+            <i class="material-icons">arrow_forward</i>
+          </div>
+          <div class="divider"></div>
+
+          <div class="app-con no-border">
+            <h4>sign up to Ride</h4>
+            <i class="material-icons">arrow_forward</i>
+          </div>
+
+        </div>
+      </div>  
+    </div>
+
+    <!--Start Footer-->
+    
+    <footer class="page-footer black">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h5 class="white-text">Uber</h5>
+            <p class="grey-text text-lighten-4 flow-text"><a href="" class="white-text">Visit Help Center</a></p>
+          </div>
+          <div class="col l4 s6 m6">
+            <h5 class="white-text">Company</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">About us</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Our offerings</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Newsroom</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Investors</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Blog</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Careers</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">AI</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Gift cards</a></li>
+            </ul>
+          </div>
+
+          <div class="col l4 s6 m6">
+            <h5 class="white-text">Products</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Ride</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Drive</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Eat</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Uber for Business</a></li>
+            </ul>
+          </div>
+
+          <div class="col l4  s12 m6">
+            <h5 class="white-text">Global citizenship</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Safety</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Diversity and Inclusion</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="container row">
+        <a href="" class="btn transparent"><i class="fab fa-facebook-square"></i></a>
+        <a href="" class="btn transparent"><i class="fab fa-twitter"></i></a>
+        <a href="" class="btn transparent"><i class="fab fa-instagram"></i></a>
+        <a href="" class="btn transparent"><i class="fab fa-youtube"></i></a>
+        <a href="" class="btn transparent"><i class="fab fa-linkedin"></i></a>
+        <a href="" class="btn transparent"><i class="material-icons left">language</i> English</a>
+        <a href="" class="btn transparent"><i class="material-icons left">location_on
+        </i> Amsterdam</a>
+        <div>
+          <img src="" alt="">
+        </div>
+      </div>
+      <div class="footer-copyright row container">
+        <div class="col s12 m8">
+        ©  2021 Uber Technologies Inc.
+        </div>
+        <div class="row col s12 m4">
+          <ul class="">
+            <li><a class="grey-text text-lighten-4 right col m6 s12 l4 right-align" href="#">Privacy</a></li>
+            <li><a class="grey-text text-lighten-4 right col m6 s12 l4 right-align" href="#">Accessibility</a></li>
+            <li><a class="grey-text text-lighten-4 right col m12 s12 l4 right-align" href="#">Terms</a></li>
+          </ul>
+        
+        </div>
+      </div>
+    </footer>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://kit.fontawesome.com/8594e42192.js" crossorigin="anonymous"></script>
 </body>
 </html>
