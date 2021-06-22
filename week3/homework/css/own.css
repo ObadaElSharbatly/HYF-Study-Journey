@@ -7,13 +7,13 @@ body {
 }
 .p-fnt{
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
-    font-size: ;
+    font-weight: 300;
+    font-size: 18pt;
 }
 
 #head-img {
     height: 80vh;
-    background-image: url(../img/Earner_Home_bg_desktop2x.png);
+    background-image: url(../imgs/Earner_Home_bg_mobile.png);
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
@@ -37,13 +37,32 @@ body {
     padding: 10px;
 }
 
+#test-swipe-1 {
+    padding: 15px 25px;
+}
+
+.uber4b {
+    background-image: url(../imgs/Uber-4-bussiness.png);
+    height: 300px;
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+}
+
 @media screen and (min-width:700px) {
 
     #tabs-con {
-        width: 400px !important;
+        width: 30vw !important;
+        min-width: 450px;
         position: absolute;
         z-index: 1;
         transform: translate(7vw,5vw);
 
+    }
+
+    #head-img {
+        background-image: url(../imgs/Earner_Home_bg_desktop2x.png);
+        min-height: 750px;
     }
 }
