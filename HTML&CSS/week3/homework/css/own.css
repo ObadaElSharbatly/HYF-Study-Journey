@@ -20,7 +20,7 @@ body {
 .p-fnt{
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 #head-img {
@@ -92,7 +92,6 @@ body {
 .links {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .uber4b {
