@@ -4,7 +4,10 @@
 
 h5 {
     font-size: 1.3rem !important;
-    margin: 15px !important;
+}
+
+#company-ls, #pro-ls {
+    margin-top: 52px;
 }
 
 h4 {
@@ -84,6 +87,12 @@ body {
 
 #test-swipe-1 {
     padding: 15px 25px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .uber4b {
