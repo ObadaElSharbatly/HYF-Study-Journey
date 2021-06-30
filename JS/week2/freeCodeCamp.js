@@ -35,17 +35,6 @@ do {
   i++;
 } while (i < 5);
 
-const obj = {
-  a: 10,
-  b: 'test',
-};
+console.log(myArr);
 
-// for...in
-for (const key in obj) {
-  console.log(obj[key]);
-}
-
-// equivalent for...of
-for (const key of Object.keys(obj)) {
-  console.log(obj[key]);
-}
+  //------------------------------
