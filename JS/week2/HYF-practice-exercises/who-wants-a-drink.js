@@ -11,9 +11,14 @@
 let drinkTray = [];
 const drinkTypes = ['cola', 'lemonade', 'water'];
 
-for (var i = 1 ; i < 6 ; i++){
-    if ()
-    drinkTray.push(drinkTypes[Math.floor(Math.random() * 3)]);
+for (var i = 0 ; i < 5 ; i++){
+    if (i === 3) {
+        drinkTray.push(drinkTypes[1]);
+    } else if (i > 3) {
+        drinkTray.push(drinkTypes[2]);
+    } else {
+        drinkTray.push(drinkTypes[i]);
+    }
 }
 
-console.log("Hey guys, I brought a" + drinkTray)
+console.log("Hey guys, I brought a" + drinkTray.join(", "));
