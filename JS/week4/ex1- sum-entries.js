@@ -6,7 +6,7 @@ Once you have found those numbers, multiply the numbers and store the result of 
  */
 
 
-const list = [1721, 979, 366, 299, 675, 1456];
+const list = [979, 366, 675, 1456, 1721, 299];
 let result;
 
 // Write your code here
@@ -16,7 +16,7 @@ for (i=0; i<list.length; i++) {
         const targetedNumbers = [list[i], list[indexOfOtherNumber]];
         result = targetedNumbers.reduce((a, b) => a * b);
     }
-}
-result
+};
+
 // TEST CODE, do not change
 console.assert(result === 514579, `The result is not correct, it is ${result}, but should be 514579`);
