@@ -20,17 +20,20 @@ If it is not possible it should return the string 'Helaas pindakaas'. Which in D
 const possibleSkateDays = (data) => {
     let possibleDates = []
     for (const element of data) {
-        if (element.lowestTemperature <= 0 && element.highestTemperature <= 0) {
-            let lowTemperatureDates = [element.date]
+        if (element.highestTemperature <= 0) {
+            // if highest temperature in 0 degree or less ad the date to the array.
+            let lowTemperatureDates = [element.date];
+            // then start a loop and push the date to the same array until finding temperature higher than 0 degree 
             for (let i = data.indexOf(element)+1; (i<data.length) && (data[i]["highestTemperature"] <= 0); i++) {
                 lowTemperatureDates.push(data[i].date);
             }
+            //now I can check this array and get the available date or make the (lowTemperatureDates) empty again
             if (lowTemperatureDates.length > 5) {
             possibleDates = lowTemperatureDates.slice(5);
             return possibleDates;
-            } else {/*do nothing  just start with the next element*/ }
+            } else { lowTemperatureDates = [];}
         } 
-         
+            // if there is no day available to skate
      } return 'Helaas pindakaas';
 }
 
