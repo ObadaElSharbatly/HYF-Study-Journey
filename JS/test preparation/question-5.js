@@ -18,9 +18,21 @@ If it is not possible it should return the string 'Helaas pindakaas'. Which in D
  * To determine if you can skate weeronline says that the temperature should not go above 0 (so 0 is fine) for 5 consecutive days. It is then possible to skate on the day after those 5 days
  */
 const possibleSkateDays = (data) => {
-
+    let possibleDates = []
+    for (const element of data) {
+        if (element.lowestTemperature <= 0 && element.highestTemperature <= 0) {
+            let lowTemperatureDates = [element.date]
+            for (let i = data.indexOf(element)+1; (i<data.length) && (data[i]["highestTemperature"] <= 0); i++) {
+                lowTemperatureDates.push(data[i].date);
+            }
+            if (lowTemperatureDates.length > 5) {
+            possibleDates = lowTemperatureDates.slice(5);
+            return possibleDates;
+            } else {/*do nothing  just start with the next element*/ }
+        } 
+         
+     } return 'Helaas pindakaas';
 }
-
 
 /**
  * TEST CODE. DO NOT EDIT

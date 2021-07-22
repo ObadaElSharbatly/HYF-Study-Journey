@@ -1,14 +1,26 @@
 /** 
  * Let's make a calculation function to solve all calculation issues in one place.
  * 
- * The function should take an array of numbers as the first value, and a string representation of the operator as a second parameter.
+ * The function should take an array of numbers as the first value,
+ * and a string representation of the operator as a second parameter.
  * It returns the result of the calculation.
  * 
  * At the bottom of the file there is some test code that will log the result to the console. You can use this to check that your code is correct.
  */
 
 function calculate(numbers, operator) {
-
+ let result;
+ if (operator === "add"){
+     return numbers.reduce((a, b)=> a + b);
+ } else if (operator === "multiply"){
+     return numbers.reduce((a, b) => a * b);
+ } else if (operator === 'divide') {
+    return numbers.reduce((a, b) => a / b);
+} else if (operator === 'subtract') {
+    return numbers.reduce((a, b) => a - b);
+} else {
+    return "You should put values and operator"
+}
 }
 
 /**

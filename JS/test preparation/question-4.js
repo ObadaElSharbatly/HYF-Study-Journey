@@ -13,18 +13,13 @@ TIP: Read the test code at the bottom to understand what needs to be fixed
  */
 
 function m(a, b) {
-    if (a.length > b.length) {
-        return 'The arrays are not of the same length. First has length ' + a.length + '. Second has length ' + b.length + '.';
+    if (a.length != b.length) {
+        return `'The arrays are not of the same length. First has length ${a.length}. Second has length ${b.length}.`;
+    } else {
+
+        const newArray = [...a, ...b];
+        return newArray;
     }
-
-    const newArray = [];
-
-    for (var i = 0; i < a.length; i = i + 1) {
-    newArray[i] = a[i];
-        newArray[i + 1] = b[i];
-    }
-
-    return newArray;
 }
 
 /**

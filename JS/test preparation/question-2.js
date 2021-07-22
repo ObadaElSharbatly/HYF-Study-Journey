@@ -5,7 +5,7 @@
  * TIP: Think of scoping
  */
 
-let decryptedPassword;
+
 
 /**
  * This function decrypts our password.
@@ -21,6 +21,7 @@ const decryptPassword = (encryptedPassword) => {
 };
 
 const loginToAPI = (encryptedPassword) => {
+  let decryptedPassword;
   decryptedPassword = decryptPassword(encryptedPassword);
   if (decryptedPassword === "donthackmeplease") {
     console.log("LOGGED IN");
