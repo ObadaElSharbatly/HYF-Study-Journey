@@ -17,11 +17,12 @@ If it is not possible it should return the string 'Helaas pindakaas'. Which in D
  * 
  * To determine if you can skate weeronline says that the temperature should not go above 0 (so 0 is fine) for 5 consecutive days. It is then possible to skate on the day after those 5 days
  */
+ 
 const possibleSkateDays = (data) => {
     let possibleDates = []
     for (const element of data) {
         if (element.highestTemperature <= 0) {
-            // if highest temperature in 0 degree or less ad the date to the array.
+            // if highest temperature is 0 degree or less add the date to the array.
             let lowTemperatureDates = [element.date];
             // then start a loop and push the date to the same array until finding temperature higher than 0 degree 
             for (let i = data.indexOf(element)+1; (i<data.length) && (data[i]["highestTemperature"] <= 0); i++) {
@@ -31,7 +32,8 @@ const possibleSkateDays = (data) => {
             if (lowTemperatureDates.length > 5) {
             possibleDates = lowTemperatureDates.slice(5);
             return possibleDates;
-            } else { lowTemperatureDates = [];}
+            }
+            lowTemperatureDates = [];
         } 
             // if there is no day available to skate
      } return 'Helaas pindakaas';
@@ -80,9 +82,13 @@ const weatherData = [{
 }, {
     date: '2021-02-16',
     lowestTemperature: -2,
-    highestTemperature: -6,
+    highestTemperature: 2,
 }, {
     date: '2021-02-17',
+    lowestTemperature: -1,
+    highestTemperature: -7,
+}, {
+    date: '2021-02-18',
     lowestTemperature: -1,
     highestTemperature: -7,
 }, {
@@ -95,6 +101,14 @@ const weatherData = [{
     highestTemperature: -3,
 }, {
     date: '2021-02-21',
+    lowestTemperature: -1,
+    highestTemperature: -9,
+}, {
+    date: '2021-02-22',
+    lowestTemperature: -1,
+    highestTemperature: -9,
+}, {
+    date: '2021-02-23',
     lowestTemperature: -1,
     highestTemperature: -9,
 }];

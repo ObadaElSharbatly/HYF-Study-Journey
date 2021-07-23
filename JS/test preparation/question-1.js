@@ -9,9 +9,11 @@ Read the test code below and make it log the right things without editing the da
 TIP: you will need 3 parameters, 2 of which are functions
 **/
 
-const getEldest = () => {
-  
-}
+const getEldest = (groupName, ageFn, nameFn) => {
+  const sortGroupNamesByAge = groupName.sort((a , b) => ageFn(b) - ageFn(a));
+  const eldestPerson = sortGroupNamesByAge[0];
+  return nameFn(eldestPerson);
+};
 
 
 /**
