@@ -18,7 +18,7 @@ function m(a, b) {
     } else {
 
         const newArray = [...a, ...b];
-        return newArray;
+        return newArray.sort((a ,b) => a - b);
     }
 }
 

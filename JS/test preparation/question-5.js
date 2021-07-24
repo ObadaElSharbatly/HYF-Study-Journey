@@ -43,75 +43,98 @@ const possibleSkateDays = (data) => {
  * TEST CODE. DO NOT EDIT
  */
 
-const weatherData = [{
-    date: '2021-02-07',
-    lowestTemperature: -4,
-    highestTemperature: 2,
-}, {
-    date: '2021-02-08',
-    lowestTemperature: -1,
-    highestTemperature: 2,
-}, {
-    date: '2021-02-09',
-    lowestTemperature: -1,
-    highestTemperature: 9,
-}, {
-    date: '2021-02-10',
-    lowestTemperature: 6,
-    highestTemperature: 10,
-}, {
-    date: '2021-02-11',
-    lowestTemperature: 3,
-    highestTemperature: 9,
-}, {
-    date: '2021-02-12',
-    lowestTemperature: 5,
-    highestTemperature: 9,
-}, {
-    date: '2021-02-13',
-    lowestTemperature: -1,
-    highestTemperature: 6,
-}, {
-    date: '2021-02-14',
-    lowestTemperature: -5,
-    highestTemperature: -1,
-}, {
-    date: '2021-02-15',
-    lowestTemperature: -5,
-    highestTemperature: -3,
-}, {
-    date: '2021-02-16',
-    lowestTemperature: -2,
-    highestTemperature: 2,
-}, {
-    date: '2021-02-17',
-    lowestTemperature: -1,
-    highestTemperature: -7,
-}, {
-    date: '2021-02-18',
-    lowestTemperature: -1,
-    highestTemperature: -7,
-}, {
-    date: '2021-02-19',
-    lowestTemperature: -11,
-    highestTemperature: 0,
-}, {
-    date: '2021-02-20',
-    lowestTemperature: -8,
-    highestTemperature: -3,
-}, {
-    date: '2021-02-21',
-    lowestTemperature: -1,
-    highestTemperature: -9,
-}, {
-    date: '2021-02-22',
-    lowestTemperature: -1,
-    highestTemperature: -9,
-}, {
-    date: '2021-02-23',
-    lowestTemperature: -1,
-    highestTemperature: -9,
-}];
+ const weatherData = [
+    {
+      date: '2021-02-07',
+      lowestTemperature: -4,
+      highestTemperature: 2,
+    },
+    {
+      date: '2021-02-08',
+      lowestTemperature: -1,
+      highestTemperature: 2,
+    },
+    {
+      date: '2021-02-09',
+      lowestTemperature: -1,
+      highestTemperature: 9,
+    },
+    {
+      date: '2021-02-10',
+      lowestTemperature: 6,
+      highestTemperature: 10,
+    },
+    {
+      date: '2021-02-11',
+      lowestTemperature: 3,
+      highestTemperature: 9,
+    },
+    {
+      date: '2021-02-12',
+      lowestTemperature: 5,
+      highestTemperature: 9,
+    },
+    {
+      date: '2021-02-13',
+      lowestTemperature: -1,
+      highestTemperature: 6,
+    },
+    {
+      date: '2021-02-14',
+      lowestTemperature: -5,
+      highestTemperature: -1,
+    },
+    {
+      date: '2021-02-15',
+      lowestTemperature: -5,
+      highestTemperature: -3,
+    },
+    {
+      date: '2021-02-16',
+      lowestTemperature: -2,
+      highestTemperature: 2,
+    },
+    {
+      date: '2021-02-17',
+      lowestTemperature: -1,
+      highestTemperature: -7,
+    },
+    {
+      date: '2021-02-18',
+      lowestTemperature: -11,
+      highestTemperature: 0,
+    },
+    {
+      date: '2021-02-19',
+      lowestTemperature: -11,
+      highestTemperature: 0,
+    },
+    {
+      date: '2021-02-20',
+      lowestTemperature: -8,
+      highestTemperature: -3,
+    },
+    {
+      date: '2021-02-21',
+      lowestTemperature: -1,
+      highestTemperature: -9,
+    },
+    {
+      date: '2021-02-22',
+      lowestTemperature: -1,
+      highestTemperature: -9,
+    },
+    {
+      date: '2021-02-23',
+      lowestTemperature: -1,
+      highestTemperature: -9,
+    },
+    {
+      date: '2021-02-24',
+      lowestTemperature: -1,
+      highestTemperature: 1,
+    },
+  ];
 
 console.log(possibleSkateDays([])) // Should log 'Helaas, pindakaas'
 console.log(possibleSkateDays(weatherData)) // Should log the dates [ '2021-02-20', '2021-02-21' ]
