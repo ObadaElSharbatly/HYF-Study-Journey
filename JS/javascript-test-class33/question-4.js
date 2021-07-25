@@ -15,6 +15,8 @@
  *     email: '',
  *   }
  */
+
+
 const createContactList = (list = [], nameGetter = (item) => item.name, emailGetter = (item) => item.email ) => {
     // this is the final organized contact list
     let OrganizedContactList = [];
