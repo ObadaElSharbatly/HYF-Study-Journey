@@ -10,7 +10,7 @@
 
 ## Js Module
 
-- week 1 home work :
+- Choose random student name : https://obadaelsharbatly.github.io/HYF-Study-Journey/JS/hyf-thursday-meeting/standup-game.html
 
 - week 2 home work :
 
