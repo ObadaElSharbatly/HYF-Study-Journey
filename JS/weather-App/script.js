@@ -5,7 +5,7 @@ const weatherTemperatureEL  = document.querySelector('#temp');
 const weatherTemperatureTypeEL  = document.querySelector('#temp-type');
 
 const apiKey = 'b458fd088f5b42c082691547210409';
-const city = 'emmen-netherlands'
+const city = 'new york'
 async function fetchData (){
     try {
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`);
