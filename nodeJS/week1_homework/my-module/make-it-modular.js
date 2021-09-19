@@ -1,9 +1,12 @@
+
 const {argv} = require('process');
 
 const filterFilesFn = require('./mymodule.js');
 
-const dirName = argv[2] /* || path.dirname(__filename); */
-const fileExt = '.' + argv[3] /* || '.js'; */
+
+
+const dirName = argv[2]; /* || path.dirname(__filename); */
+const fileExt = argv[3]; /* || '.js'; */
 
 const dealWithErrors = (err, filteredFiles) => {
     if (err) throw err;
@@ -13,3 +16,4 @@ const dealWithErrors = (err, filteredFiles) => {
 }
 
 filterFilesFn(dirName, fileExt, dealWithErrors)
+

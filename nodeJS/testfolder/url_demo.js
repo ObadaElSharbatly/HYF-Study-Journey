@@ -17,3 +17,4 @@ console.log(myUrl.searchParams);
 // loop through
 myUrl.searchParams.forEach((value, name) => console.log(`${name}: ${value}`))
 console.log(typeof myUrl.searchParams);
+console.log(myUrl.searchParams);
