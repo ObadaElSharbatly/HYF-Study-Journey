@@ -2,10 +2,10 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "liner-joke.js",
- 
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "dev" : "nodemon index"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "one-liner-joke": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
