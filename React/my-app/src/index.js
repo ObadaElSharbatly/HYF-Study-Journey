@@ -1,41 +1,57 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import "./index.css";
 
-/* const user = {
-    name : "obada",
-    age: 30,
-    active: true
-  } */
-const title = "this is user information"
-const users = [
-  {
-    name : "Ahmed",
-    age: 40,
-    active: true
-  },
-  {
-    name : "Mohamed",
-    age: 25,
-    active: false
-  },
-  {
-    name : "Ibrahim",
-    age: 33,
-    active: true
-  }
-]
+/**
+ * Our data
+ * ------------------------
+ */
+const user = {
+  name: "Chris Sev",
+  location: "Las Vegas",
+  foodType: "Everything",
+  age: 32,
+  likes: "Coding into the wee hours of the morning",
+  twitterUsername: "chris__sev",
+  avatar:
+    "https://scotch-res.cloudinary.com/image/upload/v1556479698/xRZsnhr0_400x400_cpyg2t.png"
+};
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App users={users} title={title} />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+/**
+ * Our React component where we should display data
+ * ------------------------
+ */
+function App(props) {
+  const {name, location, foodType, age, likes, twitterUsername, avatar} = props.user;
+  console.log(name);
+  return (
+    <div className="App user-deets">
+      <div className="user-deets">
+      <img src={avatar} alt="avatar pho" />
+      <h3>{name}</h3>
+      <p>
+        <strong>Location</strong>
+        <span>{location} </span>
+      </p>
+      <p>
+        <strong>Food Type</strong>
+        <span>{foodType} </span>
+      </p>
+      <p>
+        <strong>Age </strong>
+        <span>{age} </span>
+      </p>
+      <p>
+        <strong>Likes </strong>
+        <span>{likes} </span>
+      </p>
+      <p>
+        <strong>Twitter</strong>
+        <a href={twitterUsername}>@{twitterUsername} </a>
+      </p>
+      </div>
+    </div>
+  );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App user={user} />, rootElement);
