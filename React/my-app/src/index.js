@@ -1,57 +1,51 @@
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-/**
- * Our data
- * ------------------------
- */
-const user = {
-  name: "Chris Sev",
-  location: "Las Vegas",
-  foodType: "Everything",
-  age: 32,
-  likes: "Coding into the wee hours of the morning",
-  twitterUsername: "chris__sev",
-  avatar:
-    "https://scotch-res.cloudinary.com/image/upload/v1556479698/xRZsnhr0_400x400_cpyg2t.png"
-};
+function App() {
+  // MOST OF YOUR CODE GOES HERE
 
-/**
- * Our React component where we should display data
- * ------------------------
- */
-function App(props) {
-  const {name, location, foodType, age, likes, twitterUsername, avatar} = props.user;
-  console.log(name);
+  const [age, setAge] = useState();
+  const [name, setName] = useState();
+
+  function ageSelection (e) {
+    setAge(e.target.value)
+    console.log(e.target.value);
+  }
+
+  function nameTyping (e) {
+    setName(e.target.value)
+  }
+
   return (
-    <div className="App user-deets">
-      <div className="user-deets">
-      <img src={avatar} alt="avatar pho" />
-      <h3>{name}</h3>
-      <p>
-        <strong>Location</strong>
-        <span>{location} </span>
-      </p>
-      <p>
-        <strong>Food Type</strong>
-        <span>{foodType} </span>
-      </p>
-      <p>
-        <strong>Age </strong>
-        <span>{age} </span>
-      </p>
-      <p>
-        <strong>Likes </strong>
-        <span>{likes} </span>
-      </p>
-      <p>
-        <strong>Twitter</strong>
-        <a href={twitterUsername}>@{twitterUsername} </a>
-      </p>
+    <div className="App">
+      <div>
+        <h2 className="subtitle is-4">Update Data from an input</h2>
+      </div>
+
+      {/* Display Data */}
+      <div className="input-display">
+        <p>Display Name: {name} </p>
+        <p>Display Age: {age} </p>
+      </div>
+
+      {/* Collect User Inputs */}
+      <div className="inputs">
+        {/* Input name */}
+        <div className="field">
+          <label className="label">Name: </label>
+          <input className="input" type="text" placeholder="William" onChange={nameTyping} />
+        </div>
+
+        {/* Input age */}
+        <div className="field">
+          <label className="label">Age: </label>
+          <input className="input" type="number" placeholder="38" min="5" max="150" onChange={ageSelection} />
+        </div>
       </div>
     </div>
   );
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App user={user} />, rootElement);
+ReactDOM.render(<App />, rootElement);
