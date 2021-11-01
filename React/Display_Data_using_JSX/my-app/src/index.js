@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css';
+import moduleName from './';
 
+const babyNames = objs.sort((a,b) => (a.last_nom > b.last_nom) ? 1 : ((b.last_nom > a.last_nom) ? -1 : 0))
 function Counter() {
   const [count, setCount] = useState(0)
   const feedBack = count > 10 ?  "It's higher than 10!" : "Keep counting...";
