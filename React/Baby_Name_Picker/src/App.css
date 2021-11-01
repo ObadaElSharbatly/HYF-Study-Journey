@@ -9,11 +9,30 @@
 }
 
 .search-bar{
-  width: 80vw;
+  width: 40vw;
   height: 30px;
+  border: solid 1px lightslategray;
+  box-shadow: rgb(32, 118, 204) 0px 0px 5px;
   border-radius: 8px;
-  margin-top: 20px;
+  margin: 20px;
   padding-left: 20px;
+}
+
+.fav-con {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.fav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  width: 100%;
 }
 
 .names-con {
@@ -31,6 +50,7 @@
   align-items: center;
   border-radius: 8px;
   margin: 5px;
+  cursor: pointer;
 
 }
 
