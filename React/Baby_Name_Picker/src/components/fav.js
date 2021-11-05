@@ -1,5 +1,4 @@
 import NameLabel from "./name_label";
-// import { favNames } from "./search-bar";
 
 function FavList ({favNames, rmFav}) {
     return (

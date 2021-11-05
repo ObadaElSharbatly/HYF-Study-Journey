@@ -9,7 +9,6 @@ const sortedBabyNames = babyNames.sort((a,b) => (a.name > b.name) ? 1 : ((b.name
 function SearchBar () {
     const [babies, setBabies] = useState(sortedBabyNames);
     const [favNames, setFavNames] = useState([]);
-    console.log("favNames:" , favNames);
 
     const filterNames = e => {
         const favNamesSt = favNames.map(baby => baby.name);
@@ -28,12 +27,10 @@ function SearchBar () {
     }
 
     function rmFromFav (e) {
-        console.log(e);
         const babyID = e.target.id !== "" ? e.target.id : e.target.parentElement.id
         const selectedBaby = sortedBabyNames.find( baby => baby.id === Number(babyID) )
         
         setFavNames(favNames.filter(baby => baby.id !== selectedBaby.id))
-        console.log("favNames", favNames);
 
         const mainBabyList = [...babies, selectedBaby].sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0))
         setBabies(mainBabyList)
