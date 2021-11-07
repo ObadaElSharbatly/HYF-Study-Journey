@@ -9,8 +9,8 @@ function DogGallery ({dogPhotos}) {
                 <p> Get your first dog by clicking the button! </p> : 
                 dogPhotos.map((dog, key) => {
                     return (
-                        <div key={key}>
-                            <img src={dog} alt="dog" width="50"/>
+                        <div key={key} data-testid={key}>
+                            <img src={dog} alt={`dog${key}`} width="50"/>
                         </div>
                     )
                 })}

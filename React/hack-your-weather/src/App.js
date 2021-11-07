@@ -1,0 +1,62 @@
+import "./App.css";
+import Container from "./components/Container";
+import SearchBar from "./components/SearchBar";
+import { useState } from "react";
+
+function App() {
+  const [searchValue, setSearchValue] = useState("");
+  const [cityWeather, setCityWeather] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errMsg, setErrMsg] = useState(null);
+  const { REACT_APP_OPENWEATHERMAP_API_KEY } = process.env;
+
+  const endPoint = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${REACT_APP_OPENWEATHERMAP_API_KEY}`;
+  const fetchWeatherData = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    try {
+      const fetchData = await fetch(endPoint);
+      const res = await fetchData.json();
+      if (fetchData.status !== 200 || !fetchData.ok) {
+        console.log(fetchData);
+        console.log(res);
+        setErrMsg(res.message);
+        throw new Error(res.message);
+      } else {
+        setCityWeather([...cityWeather, res]);
+        setErrMsg(null);
+      }
+    } catch (error) {
+      console.log(error.stack);
+      setErrMsg(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="App">
+      <h1>Weather</h1>
+      <SearchBar
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        search={fetchWeatherData}
+        setErrMsg={setErrMsg}
+      />
+      {errMsg && <h3 className="err">{errMsg}</h3>}
+      {isLoading && <h3 className="err">Loading...</h3>}
+      {cityWeather.length > 0 ? (
+        cityWeather.map((city, index) => {
+          return <Container city={city} key={index} />;
+        })
+      ) : (
+        <h2 className="welcome-msg">
+          Welcome to HackYourWeather <br /> Enter a City Name to know the
+          current weather all over the world
+        </h2>
+      )}
+    </div>
+  );
+}
+
+export default App;

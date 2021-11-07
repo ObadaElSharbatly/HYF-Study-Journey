@@ -1,21 +1,21 @@
-import React from 'react'
+import React from "react";
 
-function Person ({fName, lName, email}) {
-
-
-    return (
-        <>
-            {
-                fName && lName && email &&
-
-                <ul>
-                    <li>First name: {fName}</li>
-                    <li>Last name: {lName}</li>
-                    <li>Email: {email}</li>
-                </ul>
-            }
-        </>
-    )
+function Person({ personInfo }) {
+  return (
+    <>
+      {personInfo && personInfo.length > 0 && (
+        <ul>
+          {personInfo.map((info, i) => {
+            return (
+              <li key={i}>
+                {info.title}: {info.info}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </>
+  );
 }
- 
+
 export default Person;

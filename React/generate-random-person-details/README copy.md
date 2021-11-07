@@ -106,7 +106,7 @@ While writing the tests, something came up. How will our component react if we o
 1. Copy over your test with the `first_name`, `last_name` and `email` property and see what is the result. Apparently, our application just writes `E-mail: ` without anything after it.
 2. That is not great, let's make it say `E-mail: --`. That way it is clear that that field was not filled in.
 3. Edit your test to expect the text to be `E-mail: --`. Your test will now be red, time to fix the application so that your test turns green!
-4. Add another test and fix the application to write `--` if there is no `first_name` aswell as if there is no `last_name` field
+4. Add another test and fix the application to write `--` if there is no `first_name` as well as if there is no `last_name` field
 
 This will happen all the time, while testing you usually see things that you didn't think of before because we are usually very focused on the happy path and are working with complete data. By writing tests we think of the code differently and we may think of things that we hadn't thought of before. Allowing us to create more robust code.
 

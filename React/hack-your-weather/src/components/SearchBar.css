@@ -1,0 +1,40 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+
+form {
+    display: flex;
+    margin-top: 25px;
+
+}
+
+.search-bar-container {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    height: 35px;
+}
+
+input {
+    border: 0px;
+    margin-left: 10px;
+    padding: 2px;
+}
+
+input:focus {
+    outline: none ;
+}
+
+input:hover {
+    cursor: text;
+}
+
+button {
+    width: 110px;
+    height: 35px;
+    border-radius: 8px;
+    margin-left: 10px;
+
+}
+
+button:hover {
+    cursor: pointer;
+}
