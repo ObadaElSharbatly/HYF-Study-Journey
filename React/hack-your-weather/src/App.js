@@ -1,5 +1,5 @@
 import "./App.css";
-import Container from "./components/Container";
+import CityCard from "./components/CityCard";
 import SearchBar from "./components/SearchBar";
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ function App() {
   const [errMsg, setErrMsg] = useState(null);
   const { REACT_APP_OPENWEATHERMAP_API_KEY } = process.env;
 
-  const endPoint = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=${REACT_APP_OPENWEATHERMAP_API_KEY}`;
+  const endPoint = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${searchValue}&appid=${REACT_APP_OPENWEATHERMAP_API_KEY}`;
   const fetchWeatherData = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -18,8 +18,6 @@ function App() {
       const fetchData = await fetch(endPoint);
       const res = await fetchData.json();
       if (fetchData.status !== 200 || !fetchData.ok) {
-        console.log(fetchData);
-        console.log(res);
         setErrMsg(res.message);
         throw new Error(res.message);
       } else {
@@ -47,7 +45,7 @@ function App() {
       {isLoading && <h3 className="err">Loading...</h3>}
       {cityWeather.length > 0 ? (
         cityWeather.map((city, index) => {
-          return <Container city={city} key={index} />;
+          return <CityCard city={city} key={index} />;
         })
       ) : (
         <h2 className="welcome-msg">
