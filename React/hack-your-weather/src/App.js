@@ -13,7 +13,7 @@ function App() {
   const endPoint = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${searchValue}&appid=${REACT_APP_OPENWEATHERMAP_API_KEY}`;
   const fetchWeatherData = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
+    setIsLoading(true)
     try {
       const fetchData = await fetch(endPoint);
       const res = await fetchData.json();
@@ -34,25 +34,16 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Weather</h1>
+      <h1> Weather </h1>{" "}
       <SearchBar
         searchValue={searchValue}
         setSearchValue={setSearchValue}
         search={fetchWeatherData}
         setErrMsg={setErrMsg}
-      />
-      {errMsg && <h3 className="err">{errMsg}</h3>}
-      {isLoading && <h3 className="err">Loading...</h3>}
-      {cityWeather.length > 0 ? (
-        cityWeather.map((city, index) => {
-          return <CityCard city={city} key={index} />;
-        })
-      ) : (
-        <h2 className="welcome-msg">
-          Welcome to HackYourWeather <br /> Enter a City Name to know the
-          current weather all over the world
-        </h2>
-      )}
+      />{" "}
+      {errMsg && <h3 className="err"> {errMsg} </h3>}{" "}
+      {isLoading && <h3 className="err"> Loading... </h3>}{" "}
+      <CityCard cityWeather={cityWeather} />{" "}
     </div>
   );
 }
