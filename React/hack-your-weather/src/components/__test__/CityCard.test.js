@@ -105,7 +105,6 @@ describe("CityCard component", () => {
 
     // give me two weather cards
     const weatherCards = getAllByTestId("weather_card");
-    screen.debug();
     expect(weatherCards.length).toBe(2);
   });
 });
