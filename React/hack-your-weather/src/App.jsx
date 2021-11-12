@@ -13,7 +13,7 @@ function App() {
   const endPoint = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${searchValue}&appid=${REACT_APP_OPENWEATHERMAP_API_KEY}`;
   const fetchWeatherData = async (e) => {
     e.preventDefault();
-    setIsLoading(true)
+    setIsLoading(true);
     try {
       const fetchData = await fetch(endPoint);
       const res = await fetchData.json();
@@ -21,7 +21,7 @@ function App() {
         setErrMsg(res.message);
         throw new Error(res.message);
       } else {
-        setCityWeather([...cityWeather, res]);
+        setCityWeather((prevValue) => [...prevValue, res]);
         setErrMsg(null);
       }
     } catch (error) {
@@ -34,16 +34,16 @@ function App() {
 
   return (
     <div className="App">
-      <h1> Weather </h1>{" "}
+      <h1> Weather </h1>
       <SearchBar
         searchValue={searchValue}
         setSearchValue={setSearchValue}
         search={fetchWeatherData}
         setErrMsg={setErrMsg}
-      />{" "}
-      {errMsg && <h3 className="err"> {errMsg} </h3>}{" "}
-      {isLoading && <h3 className="err"> Loading... </h3>}{" "}
-      <CityCard cityWeather={cityWeather} />{" "}
+      />
+      {errMsg && <h3 className="err"> {errMsg} </h3>}
+      {isLoading && <h3 className="err"> Loading... </h3>}
+      <CityCard cityWeather={cityWeather} />
     </div>
   );
 }

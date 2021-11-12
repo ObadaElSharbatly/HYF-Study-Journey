@@ -102,8 +102,7 @@ describe("CityCard component", () => {
       },
     ];
     const { getAllByTestId } = render(<CityCard cityWeather={city} />);
-
-    // give me two weather cards
+    // giwve me two weather cards
     const weatherCards = getAllByTestId("weather_card");
     expect(weatherCards.length).toBe(2);
   });
