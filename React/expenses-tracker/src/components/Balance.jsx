@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import { ExpensesContext } from "../context/GlobalContext";
 
 function Balance() {
-  const { transactionsState } = useContext(ExpensesContext);
-  const [transactions] = transactionsState;
+  const [transactions] = useContext(ExpensesContext);
   const amountArr = transactions.map((transaction) => transaction.amount);
   const total = amountArr.reduce((a, b) => {return a + b},0).toFixed(2);
 

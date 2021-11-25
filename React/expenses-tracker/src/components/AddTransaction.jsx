@@ -3,8 +3,7 @@ import { ExpensesContext } from "../context/GlobalContext";
 import { v4 as uuid } from "uuid";
 
 function AddTransaction(props) {
-  const { transactionsState } = useContext(ExpensesContext);
-  const [transactions, setTransactions] = transactionsState;
+  const [transactions, setTransactions] = useContext(ExpensesContext);
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
 
@@ -22,7 +21,7 @@ function AddTransaction(props) {
       { id: uuid(), text, amount: Number(amount) },
     ]);
     setText("");
-    setAmount(1);
+    setAmount(0);
   }
 
   return (

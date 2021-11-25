@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import { ExpensesContext } from "../context/GlobalContext";
 
 function IncomeExpenses(props) {
-  const { transactionsState } = useContext(ExpensesContext);
-  const [transactions] = transactionsState;
+  const [transactions] = useContext(ExpensesContext);
 
   const income = transactions
     .filter((transaction) => transaction.amount > 0)
