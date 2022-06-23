@@ -2,7 +2,7 @@
 ## My study journey with Hack your future Programming school
 ## HTML & CSS 
 
-- week 1 home work : 
+- [week 1 home work](https://obadaelsharbatly.github.io/HYF-Study-Journey/HTML&CSS/week1/) 
 
 - week 2 homework : 
 
