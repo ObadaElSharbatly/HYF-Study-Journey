@@ -10,6 +10,6 @@
 
 ## Js Module
 
-- Choose random student name : 
+- [Choose random student name](https://obadaelsharbatly.github.io/HYF-Study-Journey/JS/hyf-thursday-meeting/)
 
 - weather App : 
