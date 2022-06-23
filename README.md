@@ -6,7 +6,7 @@
 
 - [week 2 home work](https://obadaelsharbatly.github.io/HYF-Study-Journey/HTML&CSS/week2/) 
 
-- [week 3 home work](https://obadaelsharbatly.github.io/HYF-Study-Journey/HTML&CSS/week3/) 
+- [week 3 home work](https://obadaelsharbatly.github.io/HYF-Study-Journey/HTML&CSS/week3/homework) 
 
 ## Js Module
 
